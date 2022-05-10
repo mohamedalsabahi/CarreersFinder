@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="CarreersFinder.Views.Home">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" BackgroundColor="Chocolate"  HorizontalOptions="FillAndExpand">
+            <Label Text="Home" HorizontalOptions="Start"  TextColor="White" VerticalOptions="Center" Padding="5" FontSize="17"/>
+
+            <Button Text="Add" HorizontalOptions="EndAndExpand" Clicked="Button_Clicked"></Button>
+            
+        </StackLayout>
+        <CollectionView SelectionChanged="CollectionView_SelectionChanged" Margin="5,5" ItemsSource="{Binding AllItems}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" SelectionMode="Single" >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="20"></LinearItemsLayout>
+
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="12" BackgroundColor="Transparent" Padding="-5" Margin="-5" BorderColor="Black">
+                        
+                    <StackLayout  Orientation="Vertical" BackgroundColor="Beige" Margin="10" WidthRequest="150" HeightRequest="130">
+                                 <Label x:Name="typee" Text="{Binding Type} " HorizontalOptions="Center"  HorizontalTextAlignment="Center" BackgroundColor="LightGray" />
+                        <Label Text="{Binding CompanyName}" />
+                        <Label Text="{Binding CompanyPhone}" />
+                        <Label Text="{Binding CompanyEmail}" />
+
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="Location :"></Label>
+                                <Label Text="{Binding Location}"  />
+                                <Label Text="specilaization :"></Label>
+                                <Label Text="{Binding specilaization}" />
+                            </StackLayout>
+
+                       
+                    </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+
+</ContentPage>

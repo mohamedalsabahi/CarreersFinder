@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarreersFinder.Views.Details">
+    <ContentPage.Content>
+        <StackLayout Spacing="0" Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label  Text="Compony Informations:" Margin="10"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+
+            <Frame BackgroundColor="Transparent" VerticalOptions="StartAndExpand" CornerRadius="20" BorderColor="Black" HorizontalOptions="CenterAndExpand" Padding="-1">
+                <StackLayout Orientation="Vertical" BackgroundColor="LightGray" WidthRequest="390" HeightRequest="400">
+                    <Label x:Name="lblName" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                    <Label x:Name="lblPhone" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+
+                    <Label x:Name="lblEmail" Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" />
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                        
+                    <Label  Text="Specilization :"
+                HorizontalTextAlignment="Center" />
+
+
+                    <Label x:Name="lblSpecilization" Text="Forms!"
+                HorizontalTextAlignment="Center" />
+                    </StackLayout>
+                    
+                    
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                        <Label  Text="type :" 
+              
+                               HorizontalTextAlignment="Start"/>
+
+
+                        <Label x:Name="lblType" Text="Welcome "
+            HorizontalTextAlignment="Start"  />
+
+
+
+
+                        <Label  Text="Location :" HorizontalOptions="EndAndExpand"
+              HorizontalTextAlignment="Center"  />
+
+
+                        <Label x:Name="lblLocation" Text="Forms!" HorizontalOptions="StartAndExpand"
+               HorizontalTextAlignment="Center" />
+
+
+
+                    </StackLayout>
+                    <BoxView Margin="0" BackgroundColor="Black" HeightRequest="1" WidthRequest="200" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand"></BoxView>
+
+                    <Label x:Name="lblDescription" Text="rms!"
+                VerticalOptions="StartAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                </StackLayout>
+            </Frame>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

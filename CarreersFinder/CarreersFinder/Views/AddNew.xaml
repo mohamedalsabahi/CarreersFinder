@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CarreersFinder.Views.AddNew">
+    <ContentPage.Content>
+        <StackLayout Margin="5">
+
+                <Entry x:Name="etName" Placeholder="Company Name"/>
+            <Entry x:Name="etPhone" Placeholder="Company Phone" Keyboard="Telephone"/>
+            <Entry x:Name="etEmail" Placeholder="Company Email"/>
+            <Picker  x:Name="pkr"  ItemsSource="{Binding AllTypesLst}" SelectedItem="{Binding selSubCategories}" ItemDisplayBinding="{Binding TypeName}" />
+            <Entry x:Name="etLocation" Placeholder="Company Location"/>
+            <Entry x:Name="etspecilaization" Placeholder="Specilization"/>
+            <Editor x:Name="edDescription" Placeholder="Description" HeightRequest="100" />
+
+            <Button Text="Add" Clicked="Button_Clicked"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
