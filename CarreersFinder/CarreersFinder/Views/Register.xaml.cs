@@ -50,7 +50,9 @@ namespace CarreersFinder.Views
             {
              var rr = await auth.CreateUserWithEmailAndPasswordAsync(etEmail.Text.ToString(), etPassword.Text.ToString(), "test", true);
              
-                if(rr.FirebaseToken !="")
+                
+                if(rr.FirebaseToken !="" && string.IsNullOrEmpty(etEmail.Text.ToString()) && string.IsNullOrEmpty(etPassword.Text.ToString()))
+        
                 {
                    await Navigation.PushAsync(new Views.Home());
                 }
