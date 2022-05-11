@@ -53,23 +53,13 @@ namespace CarreersFinder.Views
                 },
             };
 
-            AllTypes();
+            
             BindingContext = this;
 
-            //  Firebase.IHttpClientFactory.
-            // firebaseClient.Child("Careers").PostAsync(new AddNewModel { });
     
         }
 
-        private async void Button_ClickedAsync(object sender, EventArgs e)
-        {
-           
-        //    var user = await FirebaseAuth.Instance.SignInWithEmailAndPasswordAsync("", "");
-         //   FirebaseAuthProvider firebaseAuth = firebaseAuth.SignInWithEmailAndPasswordAsync("", "","");
-
-          
-
-        }
+  
 
 
        async Task<FirebaseAuthProvider> Login(string email, string password)
@@ -86,7 +76,6 @@ namespace CarreersFinder.Views
         {
             AddNewModel mode = new AddNewModel();
 
-            string myBook = "c";
             mode.CompanyEmail = etEmail.Text.ToString();
             mode.CompanyName = etName.Text.ToString();
             mode.CompanyPhone = Convert.ToInt32(etPhone.Text);
@@ -97,14 +86,22 @@ namespace CarreersFinder.Views
             mode.specilaization = etspecilaization.Text.ToString();
             var firebase = new FirebaseClient("https://careersfinderapp-default-rtdb.firebaseio.com/");
             var observable = firebase
-              .Child("AllDb").PostAsync(mode);
+              .Child("dinosaurs").PostAsync(mode);
 
             Navigation.PopAsync();
         }
 
-
-        void AllTypes()
+        private void pkr_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Picker picker = sender as Picker;
+            var selected = picker.SelectedItem;
+        }
+
+        private void pkr_BindingContextChanged(object sender, EventArgs e)
+        {
+            //pkr.SelectedIndex;
+
+
         }
     }
 }

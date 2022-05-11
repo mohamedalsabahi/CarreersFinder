@@ -62,10 +62,10 @@ namespace CarreersFinder.Views
 
                 }
             }
-            catch(Exception)
+            catch(Exception) 
             {
                 await DisplayAlert("Sorry", "Somthong Error", "ok");
-
+                
             }
 
         }

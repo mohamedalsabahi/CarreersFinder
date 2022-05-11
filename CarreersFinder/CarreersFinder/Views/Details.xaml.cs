@@ -13,7 +13,6 @@ namespace CarreersFinder.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Details : ContentPage
     {
-        private AddNewModel modell;
         AddNewModel model = new AddNewModel();
 
 
@@ -21,7 +20,6 @@ namespace CarreersFinder.Views
 
         public Details(AddNewModel modelll)
         {
-            //MyProperty = MyPropertyy as AddNewModel;
             model = modelll;
 
             InitializeComponent();

@@ -29,10 +29,27 @@ namespace CarreersFinder.Views
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-        await  LoginFun(etEmail.Text.ToString(), etPassword.Text.ToString());
-          //  var result = await CrossFirebaseAuth.Current.Instance.SignInWithEmailAndPasswordAsync(etEmail.Text.ToString(), etPassword.Text.ToString());
+            try
+            {
+                //if(string.IsNullOrEmpty(etEmail.Text.ToString()) && string.IsNullOrEmpty(etPassword.Text.ToString()))
+                //{
+                //    await DisplayAlert("Sorry", "Email And Password Required", "ok");
 
-          
+                //}
+                //else
+                //{
+
+                await  LoginFun(etEmail.Text.ToString(), etPassword.Text.ToString());
+                //}
+            }
+            catch(Exception )
+            {
+                  await DisplayAlert("Sorry", "Email And Password Required", "ok");
+
+            }
+            //  var result = await CrossFirebaseAuth.Current.Instance.SignInWithEmailAndPasswordAsync(etEmail.Text.ToString(), etPassword.Text.ToString());
+
+
         }
 
         async Task<string> LoginFun(string email,string pass)

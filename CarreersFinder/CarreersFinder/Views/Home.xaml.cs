@@ -38,7 +38,6 @@ namespace CarreersFinder.Views
                 }
 
 
-              //  ma.Object.CompanyEmail.ToString();
             });
 
 

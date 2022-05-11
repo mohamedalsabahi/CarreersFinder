@@ -8,12 +8,12 @@
                 <Entry x:Name="etName" Placeholder="Company Name"/>
             <Entry x:Name="etPhone" Placeholder="Company Phone" Keyboard="Telephone"/>
             <Entry x:Name="etEmail" Placeholder="Company Email"/>
-            <Picker  x:Name="pkr"  ItemsSource="{Binding AllTypesLst}" SelectedItem="{Binding selSubCategories}" ItemDisplayBinding="{Binding TypeName}" />
+            <Picker  x:Name="pkr"  ItemsSource="{Binding AllTypesLst}" SelectedItem="{Binding selSubCategories}" BindingContextChanged="pkr_BindingContextChanged"  SelectedIndexChanged="pkr_SelectedIndexChanged" ItemDisplayBinding="{Binding TypeName}" />
             <Entry x:Name="etLocation" Placeholder="Company Location"/>
             <Entry x:Name="etspecilaization" Placeholder="Specilization"/>
             <Editor x:Name="edDescription" Placeholder="Description" HeightRequest="100" />
 
-            <Button Text="Add" Clicked="Button_Clicked"></Button>
+            <Button Text="Add" Clicked="Button_Clicked" BackgroundColor="Aqua" CornerRadius="12"></Button>
 
         </StackLayout>
     </ContentPage.Content>

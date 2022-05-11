@@ -8,14 +8,13 @@
 
             <StackLayout Orientation="Vertical" Margin="5" VerticalOptions="CenterAndExpand">
             <Label Text="Login"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             HorizontalTextAlignment="Center"   />
                 
             <Entry x:Name="etEmail" Placeholder="Email"></Entry>
             <Entry x:Name="etPassword" Placeholder="Password"></Entry>
 
-            <Button Text="Login" Clicked="Button_Clicked"></Button>
-            <Button Text="Register" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Login" BackgroundColor="LightSalmon" CornerRadius="12" Clicked="Button_Clicked"></Button>
+            <Button Text="Register" Clicked="Button_Clicked_1" BackgroundColor="LightGray" CornerRadius="12"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
