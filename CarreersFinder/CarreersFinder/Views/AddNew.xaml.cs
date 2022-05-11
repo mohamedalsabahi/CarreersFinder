@@ -18,7 +18,7 @@ namespace CarreersFinder.Views
     {
                         FirebaseClient firebaseClient = new FirebaseClient("TODO");
 
-
+        public string MySelected { get; set; }
         private string _selSubCategories;
         public string selSubCategories
         {
@@ -82,7 +82,7 @@ namespace CarreersFinder.Views
             mode.Description = edDescription.Text.ToString();
             mode.Location = etLocation.Text.ToString();
           
-            mode.Type =  selSubCategories;
+            mode.Type =  MySelected;
             mode.specilaization = etspecilaization.Text.ToString();
             var firebase = new FirebaseClient("https://careersfinderapp-default-rtdb.firebaseio.com/");
             var observable = firebase
@@ -93,8 +93,10 @@ namespace CarreersFinder.Views
 
         private void pkr_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Picker picker = sender as Picker;
-            var selected = picker.SelectedItem;
+          //  Picker picker = sender as Picker;
+            var selected = pkr.SelectedIndex;
+            var trdy = AllTypesLst[selected].TypeName;
+            MySelected = trdy;
         }
 
         private void pkr_BindingContextChanged(object sender, EventArgs e)

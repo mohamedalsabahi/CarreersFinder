@@ -11,7 +11,7 @@
              HorizontalTextAlignment="Center"   />
                 
             <Entry x:Name="etEmail" Placeholder="Email"></Entry>
-            <Entry x:Name="etPassword" Placeholder="Password"></Entry>
+            <Entry x:Name="etPassword" IsPassword="True" Placeholder="Password"></Entry>
 
             <Button Text="Login" BackgroundColor="LightSalmon" CornerRadius="12" Clicked="Button_Clicked"></Button>
             <Button Text="Register" Clicked="Button_Clicked_1" BackgroundColor="LightGray" CornerRadius="12"></Button>
